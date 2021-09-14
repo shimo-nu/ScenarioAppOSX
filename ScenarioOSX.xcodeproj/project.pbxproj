@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34D8E54026F097A00025E6D6 /* MakeScenarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D8E53F26F097A00025E6D6 /* MakeScenarioView.swift */; };
+		34D8E54226F09A5C0025E6D6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D8E54126F09A5C0025E6D6 /* HeaderView.swift */; };
+		34D8E54426F0C0A10025E6D6 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D8E54326F0C0A10025E6D6 /* HamburgerMenuView.swift */; };
+		34D8E54626F0CB3B0025E6D6 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D8E54526F0CB3B0025E6D6 /* SideMenuView.swift */; };
 		34F38B0C26EFC3D9000586A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F38B0B26EFC3D9000586A0 /* AppDelegate.swift */; };
 		34F38B0E26EFC3D9000586A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F38B0D26EFC3D9000586A0 /* SceneDelegate.swift */; };
 		34F38B1026EFC3D9000586A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F38B0F26EFC3D9000586A0 /* ContentView.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34D8E53F26F097A00025E6D6 /* MakeScenarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeScenarioView.swift; sourceTree = "<group>"; };
+		34D8E54126F09A5C0025E6D6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		34D8E54326F0C0A10025E6D6 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
+		34D8E54526F0CB3B0025E6D6 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		34F38B0826EFC3D9000586A0 /* ScenarioOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenarioOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F38B0B26EFC3D9000586A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F38B0D26EFC3D9000586A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,9 @@
 		34F38B0A26EFC3D9000586A0 /* ScenarioOSX */ = {
 			isa = PBXGroup;
 			children = (
+				34F38B4426EFCD13000586A0 /* Model */,
+				34F38B4326EFCD03000586A0 /* ViewModel */,
+				34F38B4226EFCCB8000586A0 /* View */,
 				34F38B0B26EFC3D9000586A0 /* AppDelegate.swift */,
 				34F38B0D26EFC3D9000586A0 /* SceneDelegate.swift */,
 				34F38B0F26EFC3D9000586A0 /* ContentView.swift */,
@@ -137,6 +148,31 @@
 				34F38B3226EFC3DB000586A0 /* Info.plist */,
 			);
 			path = ScenarioOSXUITests;
+			sourceTree = "<group>";
+		};
+		34F38B4226EFCCB8000586A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34D8E53F26F097A00025E6D6 /* MakeScenarioView.swift */,
+				34D8E54126F09A5C0025E6D6 /* HeaderView.swift */,
+				34D8E54326F0C0A10025E6D6 /* HamburgerMenuView.swift */,
+				34D8E54526F0CB3B0025E6D6 /* SideMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34F38B4326EFCD03000586A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34F38B4426EFCD13000586A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F38B0C26EFC3D9000586A0 /* AppDelegate.swift in Sources */,
+				34D8E54226F09A5C0025E6D6 /* HeaderView.swift in Sources */,
+				34D8E54626F0CB3B0025E6D6 /* SideMenuView.swift in Sources */,
 				34F38B0E26EFC3D9000586A0 /* SceneDelegate.swift in Sources */,
+				34D8E54426F0C0A10025E6D6 /* HamburgerMenuView.swift in Sources */,
 				34F38B1326EFC3D9000586A0 /* ScenarioOSX.xcdatamodeld in Sources */,
 				34F38B1026EFC3D9000586A0 /* ContentView.swift in Sources */,
+				34D8E54026F097A00025E6D6 /* MakeScenarioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
