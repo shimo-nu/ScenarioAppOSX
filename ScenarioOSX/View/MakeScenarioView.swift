@@ -11,10 +11,29 @@ struct MakeScenarioView: View {
     
     var body: some View {
         VStack {
+            HeaderView()
+            NavigationView {
+                ScrollView(.vertical, showsIndicators: true)
+                {
+                    VStack(spacing: 10)
+                    {
+                        ForEach(0 ..< 5) {item in
+                            GeometryReader { geometry in
+                                VStack
+                                {
+                                    Text("item")
+                                        .foregroundColor(Color.white)
+                                }
+                                .frame(width: 300, height: 200)
+                                .background(Color.gray)
+                            }
+                            .frame(width: 300, height: 200)
+                        }
+                    }
+                }
+                
+            }
             
-            Text("HeaderView")
-            Spacer()
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
     }
 }

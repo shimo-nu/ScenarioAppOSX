@@ -2,21 +2,24 @@
 //  HeaderView.swift
 //  ScenarioOSX
 //
-//  Created by 下里浩昇 on 2021/09/14.
+//  Created by 下里浩昇 on 2021/09/15.
 //
 
 import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                HStack{
-                    
-                    Text("ScenarioApp")
-                }
+        VStack {
+            HStack {
+                Image(systemName: "list.bullet")
+                Spacer()
+                Text("ScenarioApp")
+                    .font(.title)
+//                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+//                    .padding(5)
             }
         }
+        .background(Color(red: (236/255), green: (244/255), blue: (217/255)))
     }
 }
 
