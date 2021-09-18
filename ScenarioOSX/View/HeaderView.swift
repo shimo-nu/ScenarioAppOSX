@@ -17,8 +17,10 @@ struct HeaderView: View {
                     .font(.title)
 //                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
 //                    .padding(5)
+                Spacer()
             }
         }
+        .padding(.horizontal)
         .background(Color(red: (236/255), green: (244/255), blue: (217/255)))
     }
 }
