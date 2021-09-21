@@ -1,0 +1,11 @@
+build/
+*.pbxuser
+!default.pbxuser
+xcuserdata
+*.xccheckout
+*.moved-aside
+
+Pods/*
+
+*.swp
+.DS_Store

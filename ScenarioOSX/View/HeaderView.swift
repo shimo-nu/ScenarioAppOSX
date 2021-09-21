@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Binding var offset: CGFloat
+    @Binding var openOffset: CGFloat
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "list.bullet")
+                Button(action: {
+                    if (self.offset != CGFloat.zero) {
+                        self.offset = CGFloat.zero
+                    } else {
+                        self.offset = self.openOffset
+                    }
+                    
+                }, label: {
+                    Image(systemName: "list.bullet")
+                    
+                })
                 Spacer()
                 Text("ScenarioApp")
                     .font(.title)
@@ -25,8 +37,13 @@ struct HeaderView: View {
     }
 }
 
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderView()
-    }
-}
+//struct HeaderView_Previews: PreviewProvider {
+//
+//    @State private var offset = CGFloat.zero
+//    @State private var closeOffset = CGFloat.zero
+//    @State private var openOffset = CGFloat.zero
+//
+//    static var previews: some View {
+////        HeaderView()
+//    }
+//}
