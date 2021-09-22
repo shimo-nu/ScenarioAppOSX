@@ -10,30 +10,29 @@ import SwiftUI
 struct HeaderView: View {
     @Binding var offset: CGFloat
     @Binding var openOffset: CGFloat
+    @Binding var closeOffset: CGFloat
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {
-                    if (self.offset != CGFloat.zero) {
-                        self.offset = CGFloat.zero
-                    } else {
-                        self.offset = self.openOffset
-                    }
-                    
-                }, label: {
-                    Image(systemName: "list.bullet")
-                    
-                })
-                Spacer()
-                Text("ScenarioApp")
-                    .font(.title)
-//                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                    .padding(5)
-                Spacer()
-            }
+        HStack {
+            Button(action: {
+                if (self.offset != self.openOffset) {
+                    self.offset = CGFloat.zero
+                } else {
+                    self.offset = self.closeOffset
+                }
+                
+            }, label: {
+                Image(systemName: "list.bullet")
+                
+            })
+            Spacer()
+            Text("ScenarioApp")
+                .font(.title)
+                .fontWeight(.light)
+                    .padding(5)
+            Spacer()
         }
-        .padding(.horizontal)
         .background(Color(red: (236/255), green: (244/255), blue: (217/255)))
+        .edgesIgnoringSafeArea(.vertical)
     }
 }
 

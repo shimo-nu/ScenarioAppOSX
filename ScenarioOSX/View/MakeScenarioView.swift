@@ -13,11 +13,13 @@ struct MakeScenarioView: View {
     @State private var openOffset = CGFloat.zero
     
     var body: some View {
+        
         GeometryReader { geometry in
+            
             VStack {
 //
+                HeaderView(offset: $offset, openOffset: $openOffset, closeOffset: $closeOffset)
 //                HeaderView()
-                HeaderView(offset: $offset, openOffset: $openOffset)
 //                Spacer()
                 ZStack (alignment: .leading){
 //
@@ -41,8 +43,12 @@ struct MakeScenarioView: View {
                                 }
                             }
                         }
-                        
                     }
+                    .background(Color.white)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                    Color.gray.opacity(Double((self.closeOffset - self.offset)/self.closeOffset) - 0.4
+                    )
+                    
                     SideMenuView()
                         .background(Color.white)
                         .frame(width: geometry.size.width * 0.7)
@@ -55,20 +61,20 @@ struct MakeScenarioView: View {
                         .offset(x: self.offset)
                         .animation(.default)
                 }
-                .gesture(DragGesture(minimumDistance: 5)
-                            .onChanged{ value in
-                                if (self.offset < self.openOffset) {
-                                    self.offset = self.closeOffset + value.translation.width
-                                }
-                            }
-                            .onEnded { value in
-                                if (value.location.x > value.startLocation.x) {
-                                    self.offset = self.openOffset
-                                } else {
-                                    self.offset = self.closeOffset
-                                }
-                            }
-                )
+//                .gesture(DragGesture(minimumDistance: 5)
+//                            .onChanged{ value in
+//                                if (self.offset < self.openOffset) {
+//                                    self.offset = self.closeOffset + value.translation.width
+//                                }
+//                            }
+//                            .onEnded { value in
+//                                if (value.location.x > value.startLocation.x) {
+//                                    self.offset = self.openOffset
+//                                } else {
+//                                    self.offset = self.closeOffset
+//                                }
+//                            }
+//                )
                 
             }
             
