@@ -9,3 +9,5 @@ Pods/*
 
 *.swp
 .DS_Store
+
+Assets.xcassets
