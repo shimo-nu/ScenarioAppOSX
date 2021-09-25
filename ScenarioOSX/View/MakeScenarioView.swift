@@ -13,6 +13,7 @@ struct MakeScenarioView: View {
     @State private var closeOffset = CGFloat.zero
     @State private var openOffset = CGFloat.zero
     var body: some View {
+        
         GeometryReader { geometry in
             VStack{
                 HeaderView(offset: $offset, openOffset: $openOffset, closeOffset: $closeOffset)
@@ -22,17 +23,7 @@ struct MakeScenarioView: View {
                     Text("ここに書く")
                     Color.gray.opacity(Double((self.closeOffset - self.offset)/self.closeOffset) - 0.4
                     )
-                    SideMenuView()
-                        .background(Color.white)
-                        .frame(width: geometry.size.width * 0.7)
-                        .edgesIgnoringSafeArea(.bottom)
-                        .onAppear(perform: {
-                            self.offset = geometry.size.width * -1
-                            self.closeOffset = self.offset
-                            self.openOffset = .zero
-                        })
-                        .offset(x: self.offset)
-                        .animation(.default)
+           
                 }
                 Divider()
                 HStack {
@@ -75,7 +66,24 @@ struct MakeScenarioView: View {
             }
         }
     }
+     
 }
+//                .gesture(DragGesture(minimumDistance: 5)
+//                            .onChanged{ value in
+//                                if (self.offset < self.openOffset) {
+//                                    self.offset = self.closeOffset + value.translation.width
+//                                }
+//                            }
+//                            .onEnded { value in
+//                                if (value.location.x > value.startLocation.x) {
+//                                    self.offset = self.openOffset
+//                                } else {
+//                                    self.offset = self.closeOffset
+//                                }
+//                            }
+//                )
+                
+
 
 struct MakeScenarioView_Previews: PreviewProvider {
     static var previews: some View {
